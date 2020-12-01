@@ -66,6 +66,7 @@ WSGI_APPLICATION = 'project.wsgi.application'
 Enourmous change happened between line 68-91.
 The default is from 86-92, for more, look at the youtube video 'Deploy Django Website to Google Cloud'
 """
+"""
 import pymysql
 pymsql.version_info ={1,4,6,'final',0} # change mysqlclient version
 pymysql.install_as_MySQLdb()
@@ -83,11 +84,14 @@ if os.getenv('GAE_APPLICATION', None):
     }
     
 else:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': BASE_DIR / 'db.sqlite3',
-        }
+"""
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
     }
 
 
