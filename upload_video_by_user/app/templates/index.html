@@ -8,15 +8,15 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
-    <title>3D-HPE</title>
+    <title>Hello, world!</title>
   </head>
   <body>
     <nav class="navbar navbar-dark bg-dark">
-        <span class="navbar-brand mb-0 h1">3D-HPE</span>
+        <span class="navbar-brand mb-0 h1">BLC</span>
       </nav>
-    <h1 class="text-center mt-2 mb-2">3D Human Pose Estimation</h1>
+    <h1>Welcome to blearning club</h1>
     <div class="container">
-
+    
      <div class="mt-5">
       <form action="." method="post" enctype="multipart/form-data">
         {% csrf_token %}
@@ -25,16 +25,14 @@
 
       </form>
     </div>
-
+ 
     <hr>
     {% for x in all %}
         <h3 class="text-center mt-2 mb-2">{{x.caption}}</h3>
         <video class="embed-responsive embed-responsive-16by9" controls="controls" >
-            <source src="{{x.video.url}}" type="video/mp4">
-            <source src="{{x.video.url}}" type="video/avi">
-            <p>The video cannot be played</p>
+            <source src="{{x.video.url}}" type="video/mp4" />
           </video>
-    {% endfor %}
+        {% endfor %}
 
     </div>
 
